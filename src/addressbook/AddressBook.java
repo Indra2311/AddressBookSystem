@@ -1,5 +1,4 @@
 package addressbook;
-
 import java.util.Scanner;
 
 public class AddressBook {
@@ -15,13 +14,18 @@ public class AddressBook {
 	private void numOfContacts() {
 		System.out.println("Enter Number of contacts");
 		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
-		int nc = sc.nextInt();	
-		for (int i =0; i < nc; i++) {
+		Scanner scn = new Scanner(System.in);
+		int nc = scn.nextInt();
+		for (int i = 0; i < nc; i++) {
+			Scanner scd = new Scanner(System.in);
+			System.out.println("Enter the Dictionaries name:-");
+			String dictname = scd.nextLine();
+			System.out.println("###.." + dictname + "..###");
 			addContactDetails();
 		}
-			
+
 	}
+
 	public void addContactDetails() {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -136,5 +140,6 @@ public class AddressBook {
 		register.editPerson();
 		register.deletePerson();
 	}
+
 
 }
